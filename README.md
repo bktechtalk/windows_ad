@@ -24,7 +24,7 @@ ad1.internal ssh_host=ad1.example.opentlc.com
 ansible_connection=winrm
 ansible_user=Administrator
 ansible_winrm_server_cert_validation=ignore
-ansible_password=redhat@123
+ansible_password=redhat@1234
 ansible_become=false
 
 ===================================
