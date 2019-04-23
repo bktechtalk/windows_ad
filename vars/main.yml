@@ -1,5 +1,5 @@
 ad_domain_name: ad1.example.opentlc.com
-ad_safe_mode_password: 'redhat@123'
+ad_safe_mode_password: 'redhat@1234'
 as_user_name: admin@{{ ad_domain_name}}
 
 
