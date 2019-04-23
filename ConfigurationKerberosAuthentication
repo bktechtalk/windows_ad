@@ -1,0 +1,30 @@
+[root@bastion ~]# vim /etc/krb5.conf.d/ansible.conf
+[realms]
+
+ AD1.EXAMPLE.OPENTLC.COM = {
+
+ kdc = ad1.example.opentlc.com
+ }
+
+[domain_realm]
+ .ad1.example.opentlc.com = AD1.EXAMPLE.OPENTLC.COM
+ 
+ 
+~
+=============
+[root@bastion ~]# kinit administrator@AD1.EXAMPLE.OPENTLC.COM
+Password for administrator@AD1.EXAMPLE.OPENTLC.COM: <password kept in varaible>
+
+============
+
+[root@bastion ~]# klist
+Ticket cache: KEYRING:persistent:0:0
+Default principal: Administrator@AD1.EXAMPLE.OPENTLC.COM
+
+Valid starting       Expires              Service principal
+04/23/2019 11:17:30  04/23/2019 21:17:30  krbtgt/AD1.EXAMPLE.OPENTLC.COM@AD1.    3C79.EXAMPLE.OPENTLC.COM
+        renew until 04/24/2019 11:17:25
+        
+===============
+
+
