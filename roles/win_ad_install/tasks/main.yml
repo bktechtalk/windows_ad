@@ -16,3 +16,8 @@
     msg: "Joining domain. Rebooting..."
     pre_reboot_delay: 10
   when: domainstate.reboot_required
+- name: List Domain Controllers in domain
+  win_shell: nltest /dclist:"{{ ad_domain_name }}"
+  register: domain_list
+- debug:
+   var: domain_list
