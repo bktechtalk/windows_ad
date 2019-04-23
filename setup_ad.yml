@@ -1,0 +1,6 @@
+---
+- name: Install AD servers
+  hosts: windows
+  gather_facts: yes
+  roles:
+   - win_ad_install
